@@ -1,10 +1,6 @@
-import java.util.*;
-
 class Solution {
     public boolean isPalindrome(int x) {
-//        Scanner input = new Scanner(System.in);
-//        x = input.nextInt();
-//        x = -121;
+
         int temp = x;
         int rev = 0;
         while(x>0){
