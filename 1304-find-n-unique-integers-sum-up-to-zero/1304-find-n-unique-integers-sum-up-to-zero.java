@@ -9,7 +9,7 @@ class Solution {
         
         for(int i = 0; i < m ; i++){
             arr[i] = i+1;
-            arr[n-i-1] = i-(2*i)-1;
+            arr[n-1-i] = i-(2*i)-1;
         }
         return arr;
     }
