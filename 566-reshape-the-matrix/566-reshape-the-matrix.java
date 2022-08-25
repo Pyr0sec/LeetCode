@@ -5,8 +5,8 @@ class Solution {
         int[][] matrix = new int[r][c];
         int row = 0 , col = 0;
         if(m*n == r*c){
-            for(int i = 0; i<mat.length; i++){
-                for(int j = 0; j<mat[i].length; j++){
+            for(int i = 0; i<m; i++){
+                for(int j = 0; j<n; j++){
                     matrix[row][col++] = mat[i][j];
                     if(col == c){
                         row++;
