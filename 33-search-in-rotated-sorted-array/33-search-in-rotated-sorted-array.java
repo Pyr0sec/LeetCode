@@ -2,11 +2,9 @@ class Solution {
     int search(int[] nums, int target) {
         int pivot = findPivot(nums);
 
-        if (pivot == -1) { //this means it is a normal array (not rotated)
-            //do normal binary search
+        if (pivot == -1) {
             return binarysearch(nums, target, 0, nums.length-1);
         }
-        // if pivot is found, you have found 2 asc sorted arrays
         if (nums[pivot] == target) {
             return pivot;
         }
@@ -19,7 +17,7 @@ class Solution {
 
     int binarysearch(int[] arr, int target, int start, int end) {
         while (start <= end) {
-            int mid = start + (end - start)/2; // same as (start + end) / 2
+            int mid = start + (end - start)/2;
 
             if(target < arr[mid]) {
                 end = mid - 1;
@@ -38,7 +36,7 @@ class Solution {
 
         while(start <= end){
             int mid = start + (end - start)/2;
-            //4 cases over here
+            //4 cases
             if (mid < end && arr[mid] > arr[mid+1]){
                 return mid;
             }
